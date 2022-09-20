@@ -1,0 +1,12 @@
+*.log
+*.DS_Store
+node_modules
+/build
+composer.lock
+package-lock.json
+/.htaccess
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+.idea/vcs.xml
