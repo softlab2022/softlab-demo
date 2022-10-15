@@ -29,15 +29,15 @@ function custom_woocommerce_auto_complete_order( $order_id ) {
 add_action( 'mp_demo_create_sandbox', function ( $source_id ) {
 	add_filter( 'mp_demo_create_redirect', function ( $url ) use ( $source_id ) {
 		if ( 2 == $source_id ) {
-			$url .= '/admin.php?page=integrate-google-drive-getting-started';
+			$url .= '/wp-admin/admin.php?page=integrate-google-drive-getting-started';
 		}
 
 		if( 3 == $source_id ) {
-			$url .= '/edit.php?post_type=radio&page=radio-player-get-started';
+			$url .= '/wp-admin/edit.php?post_type=radio&page=radio-player-get-started';
 		}
 
 		if( 4 == $source_id ) {
-			$url .= '/edit.php?post_type=wp_radio&page=wp-radio-getting-started';
+			$url .= '/wp-admin/edit.php?post_type=wp_radio&page=wp-radio-getting-started';
 		}
 
 		return $url;
