@@ -30,8 +30,8 @@ $products = [
                      alt="SoftLab">
                 <h2 class="page-header-title">Welcome to SoftLab Demo Portal</h2>
                 <p class="page-header-description">This is the playground for our Plugins. It allows you to experiment
-                    with all the functionality of the plugins on both Front-End and Back-End.
-                    Feel free to explorer the possibilities and limits of our plugins to see if it fits your
+                    with all the functionality of the plugins on both the Front-End and Back-End.
+                    Feel free to explore the possibilities and limits of our plugins to see if it fits your
                     requirements!</p>
             </div>
         </div>

@@ -2,6 +2,8 @@
 
 
 // get all blog sites
+use motopress_demo\classes\models\General_Settings;
+
 $sites = get_sites( [
 	'public'   => 1,
 	'archived' => 0,
@@ -15,10 +17,11 @@ $source    = '';
 $product = ! empty( $_GET['product'] ) ? $_GET['product'] : '';
 
 if ( ! empty( $product ) ) {
-	$source    = array_values(wp_list_filter( $sites, [ 'path' => '/' . $product . '/' ] ));
+	$source    = array_values( wp_list_filter( $sites, [ 'path' => '/' . $product . '/' ] ) );
 	$source_id = $source[0]->blog_id;
 	$name      = get_blog_details( $source_id )->blogname;
 }
+
 
 ?>
 
@@ -37,7 +40,8 @@ if ( ! empty( $product ) ) {
                 <div class="product-select-current">
                     <div class="current-selection">
 						<?php if ( ! empty( $source ) ) { ?>
-                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/products/' . $product . '.png'; ?>" alt="<?php echo $name; ?>">
+                            <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/products/' . $product . '.png'; ?>"
+                                 alt="<?php echo $name; ?>">
                             <span><?php echo $name; ?></span>
 						<?php } else { ?>
                             <span class="none">Select Product</span>
@@ -66,7 +70,8 @@ if ( ! empty( $product ) ) {
 						}
 
 						?>
-                        <div class="product-select-item <?php echo $is_active ? 'active' : ''; ?>" data-id="<?php echo $site_id; ?>">
+                        <div class="product-select-item <?php echo $is_active ? 'active' : ''; ?>"
+                             data-id="<?php echo $site_id; ?>">
                             <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/products/' . $path . '.png'; ?>"
                                  alt="<?php echo $name; ?>">
                             <span><?php echo $name; ?></span>
@@ -80,7 +85,7 @@ if ( ! empty( $product ) ) {
 
 
         <div class="input-wrapper">
-            <label for="mp_email">Your email to send demo link</label>
+            <label for="mp_email">Your email to send the demo link</label>
             <input type="email" id="mp_email" name="mp_email" class="mp-demo-email"
                    placeholder="Enter your email address" required>
 
@@ -88,11 +93,12 @@ if ( ! empty( $product ) ) {
 
 
             <p>
-                An activation email will be sent to this email address. After the confirmation you will be redirected to
+                An activation email will be sent to this email address. After the confirmation, you will be redirected
+                to
                 WordPress Dashboard where you can start testing!
             </p>
             <p>
-                Your email address will only be used to register you as an user in the SandBox demo and to provide you
+                Your email address will only be used to register you as a user in the SandBox demo and to provide you
                 access to the Admin Dashboard.
             </p>
         </div>
@@ -100,11 +106,9 @@ if ( ! empty( $product ) ) {
 
         <input name="mp_source_id" type="hidden" value="<?php echo $source_id; ?>">
 
-		<?php if ( \motopress_demo\classes\models\General_Settings::get_instance()->is_captcha_enabled() && isset( $captcha ) && ( $captcha == 1 ) ) { ?>
-            <div class="input-wrapper">
-                <div class="g-recaptcha mp-recaptcha" data-sitekey="<?php echo $captcha_options['site_key']; ?>"></div>
-            </div>
-		<?php } ?>
+        <div class="input-wrapper">
+            <div class="g-recaptcha mp-recaptcha" data-sitekey="6Lcam4EiAAAAAFV6aW-TFjU-CgUBaz03UP9DCqJz"></div>
+        </div>
 
         <div class="input-wrapper">
             <button type="submit" name="submit" class="mp-submit">
