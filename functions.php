@@ -33,7 +33,7 @@ add_action( 'mp_demo_create_sandbox', function ( $source_id ) {
 		}
 
 		if( 3 == $source_id ) {
-			$url .= '/wp-admin/edit.php?post_type=radio&page=radio-player-get-started';
+			$url .= '/wp-admin/admin.php?page=radio-player-getting-started';
 		}
 
 		if( 4 == $source_id ) {
