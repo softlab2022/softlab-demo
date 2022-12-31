@@ -43,3 +43,6 @@ add_action( 'mp_demo_create_sandbox', function ( $source_id ) {
 		return $url;
 	} );
 } );
+
+// The cloned site is a new and different one – this will auto activate the license on the new site to resolve the clone.
+define( 'FS__RESOLVE_CLONE_AS', 'long_term_duplicate' );
