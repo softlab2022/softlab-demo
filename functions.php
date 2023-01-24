@@ -40,9 +40,11 @@ add_action( 'mp_demo_create_sandbox', function ( $source_id ) {
 			$url .= '/wp-admin/edit.php?post_type=wp_radio&page=wp-radio-getting-started';
 		}
 
+
+		if( 873 == $source_id ) {
+			$url .= '/wp-admin/admin.php?page=dracula-getting-started';
+		}
+
 		return $url;
 	} );
 } );
-
-// The cloned site is a new and different one – this will auto activate the license on the new site to resolve the clone.
-define( 'FS__RESOLVE_CLONE_AS', 'long_term_duplicate' );
