@@ -7,18 +7,29 @@ get_header( 'demo' );
 
 
 $products = [
+    
 	'integrate-google-drive' => [
 		'name'        => 'Integrate Google Drive',
 		'description' => 'Complete Google Drive Cloud Solution For WordPress.',
 	],
-	'radio-player'           => [
+	'radio-player'    => [
 		'name'        => 'Radio Player',
 		'description' => 'Worldwide Online Radio Stations Directory for WordPress.',
 	],
+    'dracula-dark-mode'  => [
+		'name'        => 'Dracula Dark Mode',
+		'description' => 'The Revolutionary Dark Mode Plugin For WordPress',
+	],
+    'reader-mode'     => [
+		'name'        => 'Reader Mode',
+		'description' => 'Distraction-free Content Reader for WordPress.',
+	],
+    
 	'wp-radio'               => [
 		'name'        => 'WP Radio',
 		'description' => 'Live Shoutcast, Icecast and Audio Stream Player for WordPress.',
 	],
+    
 ];
 
 
@@ -67,7 +78,6 @@ $products = [
             </div>
         </div>
     </div>
-
 
 <?php
 get_footer();

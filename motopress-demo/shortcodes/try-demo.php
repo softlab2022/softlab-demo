@@ -69,10 +69,6 @@ if ( ! empty( $product ) ) {
 							continue;
 						}
 
-						if ( 'reader-mode' == $path ) {
-							continue;
-						}
-
 						?>
                         <div class="product-select-item <?php echo $is_active ? 'active' : ''; ?>"
                              data-id="<?php echo $site_id; ?>">
