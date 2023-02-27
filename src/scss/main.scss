@@ -324,6 +324,9 @@ body.page-template-demo {
 @media( max-width: 768px ){
   .page-header-wrap{
     .page-header{
+      img{
+        width:200px;
+      }
       h2{
         font-size: 2.5rem;
       }
@@ -333,6 +336,7 @@ body.page-template-demo {
     }
   }
   .explore-products{
+    padding:0;
     .product-item{
       width:45%;
       border-right: 1px solid transparent;
@@ -342,17 +346,24 @@ body.page-template-demo {
 }
 @media( max-width: 600px ){
   .page-header-wrap{
+    padding:100px 0;
+  }
+  .page-header-wrap{
+    img{
+      width:200px;
+    }
     .page-header{
       h2{
         font-size: 2.5rem;
       }
       p{
-        width: 100%;
+        width: 90%;
       }
     }
   }
   
   .explore-products-header{
+    margin-bottom: 0;
     h2{
       font-size: 2rem;
     }
@@ -362,7 +373,9 @@ body.page-template-demo {
     }
   }
   .explore-products{
+    
     .product-item{
+      margin:0 1rem;
       width:90%;
       border-right: 1px solid transparent;
     }
