@@ -28,21 +28,29 @@ function custom_woocommerce_auto_complete_order( $order_id ) {
 
 add_action( 'mp_demo_create_sandbox', function ( $source_id ) {
 	add_filter( 'mp_demo_create_redirect', function ( $url ) use ( $source_id ) {
-		if ( 2 == $source_id ) {
+
+		$site = get_site( $source_id );
+		$slug = $site->path;
+
+		if ( 'integrate-google-drive/' == $slug ) {
 			$url .= '/wp-admin/admin.php?page=integrate-google-drive-getting-started';
 		}
 
-		if( 3 == $source_id ) {
+		if ( 'radio-player/' == $slug ) {
 			$url .= '/wp-admin/admin.php?page=radio-player-getting-started';
 		}
 
-		if( 4 == $source_id ) {
+		if ( 'wp-radio/' == $slug ) {
 			$url .= '/wp-admin/edit.php?post_type=wp_radio&page=wp-radio-getting-started';
 		}
 
 
-		if( 873 == $source_id ) {
+		if ( 'dracula-dark-mode/' == $slug ) {
 			$url .= '/wp-admin/admin.php?page=dracula-getting-started';
+		}
+
+		if ( 'reader-mode/' == $slug ) {
+			$url .= '/wp-admin/admin.php?page=reader-mode-getting-started';
 		}
 
 		return $url;
