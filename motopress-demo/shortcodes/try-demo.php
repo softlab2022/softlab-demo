@@ -4,6 +4,7 @@
 // get all blog sites
 use motopress_demo\classes\models\General_Settings;
 
+
 $sites = get_sites( [
 	'public'   => 1,
 	'archived' => 0,
