@@ -29,6 +29,8 @@ function custom_woocommerce_auto_complete_order($order_id)
 }
 
 add_action('mp_demo_create_sandbox', function ($source_id) {
+
+    
     add_filter('mp_demo_create_redirect', function ($url) use ($source_id) {
 
         $site = get_site($source_id);
@@ -36,22 +38,14 @@ add_action('mp_demo_create_sandbox', function ($source_id) {
 
         if ('integrate-google-drive' == $slug) {
             $url .= '/wp-admin/admin.php?page=integrate-google-drive-getting-started';
-        }
-
-        if ('radio-player' == $slug) {
+        }elseif ('radio-player' == $slug) {
             $url .= '/wp-admin/admin.php?page=radio-player-getting-started';
-        }
-
-        if ('wp-radio' == $slug) {
+        }elseif ('wp-radio' == $slug) {
             $url .= '/wp-admin/edit.php?post_type=wp_radio&page=wp-radio-getting-started';
         }
-
-
-        if ('dracula-dark-mode' == $slug) {
+        elseif ('dracula-dark-mode' == $slug) {
             $url .= '/wp-admin/admin.php?page=dracula-getting-started';
-        }
-
-        if ('reader-mode' == $slug) {
+        }elseif ('reader-mode' == $slug) {
             $url .= '/wp-admin/admin.php?page=reader-mode-getting-started';
         }
 
