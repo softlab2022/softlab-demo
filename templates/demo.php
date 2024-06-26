@@ -20,15 +20,6 @@ $products = [
 		'name'        => 'Dracula Dark Mode',
 		'description' => 'The Revolutionary Dark Mode Plugin For WordPress',
 	],
-    'reader-mode'     => [
-		'name'        => 'Reader Mode',
-		'description' => 'Distraction-free Content Reader for WordPress.',
-	],
-    
-	'wp-radio'               => [
-		'name'        => 'WP Radio',
-		'description' => 'Live Shoutcast, Icecast and Audio Stream Player for WordPress.',
-	],
     
 ];
 
