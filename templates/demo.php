@@ -20,6 +20,10 @@ $products = [
 		'name'        => 'Dracula Dark Mode',
 		'description' => 'The Revolutionary Dark Mode Plugin For WordPress',
 	],
+    'essential-addons-for-contact-form-7'  => [
+		'name'        => 'Essential Addons for Contact Form 7',
+		'description' => 'All-in-one enhancement suite for improving Contact Form 7 and WordPress',
+	],
     
 ];
 
